@@ -41,6 +41,16 @@ const CVForm = () => {
             onChange={handleInputChange}
           />
         </label>
+        <label>
+          <input
+            placeholder="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+          />
+        </label>
+        <br />
         <button type="submit">Create CV</button>
       </form>
     </div>
