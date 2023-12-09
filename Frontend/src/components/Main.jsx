@@ -22,6 +22,23 @@ const Main = () => {
     }));
   };
 
+  const handleChangeFile = (e) => {
+    const { name } = e.target;
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      setCv((prevState) => ({
+        ...prevState,
+        personalInfo: {
+          [name]: reader.result,
+        },
+      }));
+    };
+    reader.readAsDataURL(file);
+  };
+
   return (
     <div>
       <CVForm handleChangePersonal={handleChangePersonal} />
