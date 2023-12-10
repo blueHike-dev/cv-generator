@@ -138,6 +138,7 @@ const Main = () => {
   return (
     <div>
       <CVForm
+        cv={cv}
         onChangePersonal={handleChangePersonal}
         onChangeExperience={handleChangeExperience}
         onAddExperience={handleAddExperience}
