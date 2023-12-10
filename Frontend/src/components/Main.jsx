@@ -1,6 +1,9 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import emptyCV from "./utils/emptyCV";
+import { v4 as uuidv4 } from "uuid";
 import CVForm from "./CVForm/CVForm";
+import exampleCV from "./utils/exampleCV";
+import { useReactToPrint } from "react-to-print";
 
 const Main = () => {
   const [cv, setCv] = useState(emptyCV);
@@ -93,6 +96,45 @@ const Main = () => {
     });
   };
 
+  const handleAddEducation = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      education: [
+        ...prevState.education,
+        {
+          id: uuidv4(),
+          universityName: "",
+          city: "",
+          degree: "",
+          subject: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+
+  const handleDeleteEducation = (id) => {
+    setCv((prevState) => {
+      const newEducation = prevState.education.filter(
+        (educationItem) => educationItem.id !== id
+      );
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
+
+  const handleLoadExample = () => {
+    setCv(exampleCV);
+  };
+
+  const handleReset = () => {
+    setCv(emptyCV);
+  };
+
+  const componentRef = useRef();
+
+  const handlePrint = useReactToPrint({ content: () => componentRef.current });
+
   return (
     <div>
       <CVForm
@@ -101,6 +143,11 @@ const Main = () => {
         onAddExperience={handleAddExperience}
         onDeleteExperience={handleDeleteExperience}
         onChangeEducation={handleChangeEducation}
+        onAddEducation={handleAddEducation}
+        onDeleteEducation={handleDeleteEducation}
+        onPrint={handlePrint}
+        onLoadExample={handleLoadExample}
+        onReset={handleReset}
       />
     </div>
   );
