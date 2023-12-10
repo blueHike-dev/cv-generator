@@ -1,4 +1,5 @@
 import React from "react";
+import Personal from "./Personal";
 
 const CVForm = ({
   cv,
@@ -13,7 +14,11 @@ const CVForm = ({
   onLoadExample,
   onReset,
 }) => {
-  return <div></div>;
+  return (
+    <CVFromWrapper>
+      <Personal personalInfo={cv.personalInfo} onChange={onChangePersonal} />
+    </CVFromWrapper>
+  );
 };
 
 export default CVForm;
