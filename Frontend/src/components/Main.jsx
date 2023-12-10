@@ -39,9 +39,69 @@ const Main = () => {
     reader.readAsDataURL(file);
   };
 
+  const handleChangeExperience = (e, id) => {
+    const { name, value } = e.target;
+
+    setCv((prevState) => {
+      const newExperience = prevState.experience.map((experienceItem) => {
+        if (experienceItem.id === id) {
+          return { ...experienceItem, [name]: value };
+        }
+        return experienceItem;
+      });
+      return { ...prevState, experience: [...newExperience] };
+    });
+  };
+
+  const handleAddExperience = () => {
+    setCv((prevState) => ({
+      ...prevState,
+      experience: [
+        ...prevState.experience,
+        {
+          id: uuidv4(),
+          position: "",
+          company: "",
+          city: "",
+          from: "",
+          to: "",
+        },
+      ],
+    }));
+  };
+
+  const handleDeleteExperience = (id) => {
+    setCv((prevState) => {
+      const newExperience = prevState.experience.filter(
+        (experienceItem) => experienceItem.id !== id
+      );
+      return { ...prevState, experience: [...newExperience] };
+    });
+  };
+
+  const handleChangeEducation = (e, id) => {
+    const { name, value } = e.target;
+
+    setCv((prevState) => {
+      const newEducation = prevState.education.map((educationItem) => {
+        if (educationItem.id === id) {
+          return { ...educationItem, [name]: value };
+        }
+        return educationItem;
+      });
+      return { ...prevState, education: [...newEducation] };
+    });
+  };
+
   return (
     <div>
-      <CVForm handleChangePersonal={handleChangePersonal} />
+      <CVForm
+        onChangePersonal={handleChangePersonal}
+        onChangeExperience={handleChangeExperience}
+        onAddExperience={handleAddExperience}
+        onDeleteExperience={handleDeleteExperience}
+        onChangeEducation={handleChangeEducation}
+      />
     </div>
   );
 };
