@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-const exampleCV = {
+const ExampleCV = {
   personalInfo: {
     firstName: "Simon",
     lastName: "Muiruri",
@@ -58,4 +58,4 @@ const exampleCV = {
   ],
 };
 
-export default exampleCV;
+export default ExampleCV;
