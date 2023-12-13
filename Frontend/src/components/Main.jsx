@@ -4,6 +4,8 @@ import { v4 as uuidv4 } from "uuid";
 import CVForm from "./CVForm/CVForm";
 import exampleCV from "./utils/exampleCV";
 import { useReactToPrint } from "react-to-print";
+import CVPreview from "./CVPreview/CVPreview";
+import styled from "styled-components";
 
 const Main = () => {
   const [cv, setCv] = useState(emptyCV);
@@ -136,7 +138,7 @@ const Main = () => {
   const handlePrint = useReactToPrint({ content: () => componentRef.current });
 
   return (
-    <div>
+    <MainWrapper>
       <CVForm
         cv={cv}
         onChangePersonal={handleChangePersonal}
@@ -150,8 +152,25 @@ const Main = () => {
         onLoadExample={handleLoadExample}
         onReset={handleReset}
       />
-    </div>
+      <CVPreview cv={cv} ref={componentRef} />
+    </MainWrapper>
   );
 };
 
 export default Main;
+
+const MainWrapper = styled.main`
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1800px;
+  padding: 4rem 8rem;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+
+  @media (max-width: 1600px) {
+    flex-direction: column;
+    align-items: center;
+  }
+`;

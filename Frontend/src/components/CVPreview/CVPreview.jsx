@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import styled from "styled-components";
 import Header from "./Header";
 import Content from "./Content";
+import Sidebar from "./Sidebar";
 
 //REACT-TO-PRINT PACKAGE PRINTS ONLY CLASS COMPONENTS
 
@@ -17,6 +18,7 @@ class CVPreview extends Component {
           experience={cv.experience}
           education={cv.education}
         />
+        <Sidebar personalInfo={cv.personalInfo} />
       </CVPreviewWrapper>
     );
   }
