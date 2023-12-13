@@ -2,7 +2,15 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 const Button = ({ text, onClick, primary, secondary, red }) => {
-  return <ButtonWrapper>Button</ButtonWrapper>;
+  return (
+    <ButtonWrapper
+      onClick={onClick}
+      primary={primary}
+      secondary={secondary}
+      red={red}>
+      {text}
+    </ButtonWrapper>
+  );
 };
 
 const ButtonWrapper = styled.button`
