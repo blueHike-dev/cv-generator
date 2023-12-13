@@ -7,8 +7,18 @@ const SubsectionWrapper = styled.section`
   padding: ${(props) => props.padding};
 `;
 
-const Subsection = () => {
-  return <SubsectionWrapper padding={titlePadding}></SubsectionWrapper>;
+const Title = styled.h4`
+  padding: ${(props) => props.padding};
+  line-height: 1.6;
+`;
+
+const Subsection = ({ title, children, titlePadding }) => {
+  return (
+    <SubsectionWrapper padding={titlePadding}>
+      <Title>{title}</Title>
+      {children}
+    </SubsectionWrapper>
+  );
 };
 
 export default Subsection;
