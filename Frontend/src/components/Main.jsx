@@ -129,6 +129,8 @@ const Main = () => {
     setCv(exampleCV);
   };
 
+  const handleDownload = () => {};
+
   const handleReset = () => {
     setCv(emptyCV);
   };
@@ -148,6 +150,7 @@ const Main = () => {
         onChangeEducation={handleChangeEducation}
         onAddEducation={handleAddEducation}
         onDeleteEducation={handleDeleteEducation}
+        onDownload={handleDownload}
         onPrint={handlePrint}
         onLoadExample={handleLoadExample}
         onReset={handleReset}

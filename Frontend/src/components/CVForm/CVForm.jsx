@@ -14,6 +14,7 @@ const CVForm = ({
   onChangeEducation,
   onAddEducation,
   onDeleteEducation,
+  onDownLoad,
   onPrint,
   onLoadExample,
   onReset,
@@ -33,11 +34,12 @@ const CVForm = ({
         onAdd={onAddEducation}
         onDelete={onDeleteEducation}
       />
-      <>
+      <CVButtonWrapper>
         <Button text="Generate PDF" onClick={onPrint} primary></Button>
+        <Button text="Download your CV" onClick={onDownLoad} black></Button>
         <Button text="Load Example" onClick={onLoadExample} secondary></Button>
         <Button text="Reset " onClick={onReset} red></Button>
-      </>
+      </CVButtonWrapper>
     </CVFormWrapper>
   );
 };
@@ -51,6 +53,12 @@ const CVFormWrapper = styled.div`
   border-radius: 5px;
   background-color: ${({ theme }) => theme.colors.light};
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
+
+const CVButtonWrapper = styled.button`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 `;
 
 export default CVForm;

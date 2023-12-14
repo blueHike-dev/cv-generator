@@ -35,6 +35,7 @@ const ContentWrapper = styled.div`
 
 const Description = styled.div`
   font-style: italic;
+  max-width: 40vw;
 `;
 
 export default Content;
