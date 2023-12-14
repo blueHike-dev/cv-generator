@@ -28,6 +28,10 @@ const HeaderWrapper = styled.div`
   @media (max-width: 1600px) {
     justify-content: center;
   }
+
+  @media (max-width: 600px) {
+    font-size: 1.2rem;
+  }
 `;
 
 export default Header;

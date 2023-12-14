@@ -6,8 +6,7 @@ const Header = ({ personalInfo }) => {
   return (
     <CVHeaderWrapper>
       <h1>
-        {firstName}
-        {lastName}
+        {firstName} {lastName}
       </h1>
       <p>{title}</p>
     </CVHeaderWrapper>

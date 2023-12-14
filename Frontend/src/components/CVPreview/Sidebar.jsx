@@ -23,6 +23,14 @@ const SidebarWrapper = styled.div`
 
 const Photo = styled.img`
   margin-bottom: 2rem;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 4px;
+
+  @media (max-width: 600px) {
+    width: 7rem;
+    height: 7rem;
+  }
 `;
 
 export default Sidebar;

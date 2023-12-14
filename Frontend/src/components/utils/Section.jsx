@@ -29,6 +29,7 @@ const SectionWrapper = styled.section`
 
 const Title = styled.h3`
   padding: ${(props) => props.padding};
+  font-size: 3rem;
 
   ${(props) =>
     props.contrast &&
@@ -36,6 +37,10 @@ const Title = styled.h3`
       border-bottom: 1px solid ${({ theme }) => theme.colors.lightBorder};
       color: ${({ theme }) => theme.colors.blue};
     `}
+
+  @media (max-width: 600px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Children = styled.div`
