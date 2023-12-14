@@ -19,7 +19,7 @@ const HeaderWrapper = styled.div`
   font-family: "Lato", sans-serif;
   display: flex;
   align-items: center;
-  max-width: 1800px;
+  width: 100vw;
   padding: 3rem 8rem;
   margin: 0 auto;
   color: ${({ theme }) => theme.colors.light};

@@ -9,6 +9,8 @@ const Footer = () => {
   );
 };
 
-const FooterWrapper = styled.footer``;
+const FooterWrapper = styled.footer`
+  width: 80vw;
+`;
 
 export default Footer;

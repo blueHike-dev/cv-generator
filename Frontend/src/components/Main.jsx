@@ -164,7 +164,7 @@ const MainWrapper = styled.main`
   align-items: flex-start;
   justify-content: space-between;
   gap: 4rem;
-  max-width: 1800px;
+  width: 90vw;
   padding: 4rem 8rem;
   margin: 0 auto;
   margin-bottom: 4rem;
