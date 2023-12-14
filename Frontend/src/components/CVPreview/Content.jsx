@@ -15,7 +15,7 @@ const Content = ({ personalInfo, experience, education }) => {
 
   return (
     <ContentWrapper>
-      <Section title="Description" contrastTitle>
+      <Section title="Career Ambition" contrastTitle>
         <Description>{personalInfo.description}</Description>
       </Section>
       <Section title="Experience" direction="column" contrastTitle>
