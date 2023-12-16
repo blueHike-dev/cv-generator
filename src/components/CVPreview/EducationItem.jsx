@@ -11,8 +11,8 @@ const EducationItem = ({ educationItem }) => {
       <Info>
         <Subsection
           title={`${educationItem.universityName}, ${educationItem.city}`}>
-          <p>Degree: {educationItem.degree}</p>
-          <p>Subject: {educationItem.subject}</p>
+          <p>: {educationItem.degree}</p>
+          <p>: {educationItem.subject}</p>
         </Subsection>
       </Info>
     </EducationItemWrapper>

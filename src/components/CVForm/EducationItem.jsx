@@ -9,7 +9,7 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
         onChange={(e) => onChange(e, id)}
         type="text"
         name="universityName"
-        placeholder="University name"
+        placeholder="School"
         value={educationItem.universityName}
       />
       <Input
@@ -23,14 +23,14 @@ const EducationItem = ({ id, educationItem, onChange, onDelete }) => {
         onChange={(e) => onChange(e, id)}
         type="text"
         name="degree"
-        placeholder="Degree"
+        placeholder="Level"
         value={educationItem.degree}
       />
       <Input
         onChange={(e) => onChange(e, id)}
         type="text"
         name="subject"
-        placeholder="Subject"
+        placeholder="Certificate"
         value={educationItem.subject}
       />
       <Input

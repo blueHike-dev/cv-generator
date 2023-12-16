@@ -15,7 +15,7 @@ const Content = ({ personalInfo, experience, education }) => {
 
   return (
     <ContentWrapper>
-      <Section title="Career Ambition" contrastTitle>
+      <Section title="Description" contrastTitle>
         <Description>{personalInfo.description}</Description>
       </Section>
       <Section title="Experience" direction="column" contrastTitle>
@@ -23,6 +23,15 @@ const Content = ({ personalInfo, experience, education }) => {
       </Section>
       <Section title="Education" direction="column" contrastTitle>
         {educationItems}
+      </Section>
+      <Section title="Skills" contrastTitle>
+        <Description>{personalInfo.skills}</Description>
+      </Section>
+      <Section title="Hobbies & Interests" contrastTitle>
+        <Description>{personalInfo.hobbiesInterests}</Description>
+      </Section>
+      <Section title="Referees" contrastTitle>
+        <Description>{personalInfo.referees}</Description>
       </Section>
     </ContentWrapper>
   );
@@ -34,7 +43,7 @@ const ContentWrapper = styled.div`
 `;
 
 const Description = styled.div`
-  font-style: italic;
+  font-style: normal;
   max-width: 40vw;
 `;
 

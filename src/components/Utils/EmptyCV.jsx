@@ -11,6 +11,9 @@ const emptyCV = {
     phoneNumber: "",
     email: "",
     description: "",
+    skills: "",
+    hobbiesInterests: "",
+    referee: "",
   },
   experience: [
     {

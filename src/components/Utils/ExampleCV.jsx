@@ -12,6 +12,9 @@ const ExampleCV = {
     email: "wambuisimon712@gmail.com",
     description:
       "To join an interactive and challenging organization that offers me a constructive workplace for adding value to people and the organization To join a reputable organization that offers me a constructive workplace for excelling and developing my potential in entrepreneurship ",
+    skills: "Hiking",
+    hobbiesInterests: "eating",
+    referee: "simo Blues",
   },
   experience: [
     {
@@ -37,7 +40,7 @@ const ExampleCV = {
       universityName: "Laikipia University",
       city: "Nyahururu",
       degree: "UnderGraduate",
-      subject: "Bachelor of Science",
+      subject: "BSc Economics and Statistics",
       from: "2019",
       to: "2023",
     },
@@ -45,8 +48,17 @@ const ExampleCV = {
       id: uuidv4(),
       universityName: "Kiaguthu Boys School",
       city: "Murang'a",
-      degree: "",
-      subject: "",
+      degree: "High School",
+      subject: "Kenya Certificate of Secondary Education",
+      from: "2015",
+      to: "2018",
+    },
+    {
+      id: uuidv4(),
+      universityName: " New Kihumbuini School",
+      city: "Nairobi",
+      degree: "Primary School",
+      subject: "Kenya Certificate of Primary Education",
       from: "2015",
       to: "2018",
     },

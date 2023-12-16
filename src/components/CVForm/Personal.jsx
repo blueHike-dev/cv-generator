@@ -64,6 +64,24 @@ const Personal = ({ personalInfo, onChange }) => {
         placeholder="Career Ambition"
         value={personalInfo.description}
       />
+      <TextArea
+        onChange={(e) => onChange(e)}
+        name="skills"
+        placeholder="Skills"
+        value={personalInfo.skills}
+      />
+      <TextArea
+        onChange={(e) => onChange(e)}
+        name="hobbiesInterests"
+        placeholder="Hobbies & Interests"
+        value={personalInfo.hobbiesInterests}
+      />
+      <TextArea
+        onChange={(e) => onChange(e)}
+        name="referees"
+        placeholder="Referees"
+        value={personalInfo.referee}
+      />
     </Section>
   );
 };

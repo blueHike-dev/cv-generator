@@ -28,12 +28,12 @@ export default CVPreview;
 
 const CVPreviewWrapper = styled.div`
   width: 70vw;
-  height: 120vh;
+  height: 160vh;
   position: sticky;
   top: 10px;
   display: grid;
   grid-template-columns: 45vw 25vw;
-  grid-template-rows: 20vh 100vh;
+  grid-template-rows: 20vh 140vh;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
   @media (max-width: 600px) {
