@@ -29,7 +29,7 @@ const Period = styled.div`
 `;
 
 const Info = styled.div`
-  width: 70%;
+  width: 60%;
 `;
 
 export default EducationItem;
