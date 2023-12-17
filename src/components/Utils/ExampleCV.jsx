@@ -12,9 +12,9 @@ const ExampleCV = {
     email: "wambuisimon712@gmail.com",
     description:
       "To join an interactive and challenging organization that offers me a constructive workplace for adding value to people and the organization To join a reputable organization that offers me a constructive workplace for excelling and developing my potential in entrepreneurship ",
-    skills: "Hiking",
-    hobbiesInterests: "eating",
-    referee: "simo Blues",
+    skills: "Listening, Coding",
+    hobbiesInterests: "Reading books, Hiking",
+    referee: "blueHike",
   },
   experience: [
     {
