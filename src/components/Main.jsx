@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import emptyCV from "./utils/emptyCV";
+import emptyCV from "./utils/EmptyCV";
 import { v4 as uuidv4 } from "uuid";
 import CVForm from "./CVForm/CVForm";
 import exampleCV from "./utils/exampleCV";
