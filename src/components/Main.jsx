@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react";
-import emptyCV from "./utils/EmptyCV";
 import { v4 as uuidv4 } from "uuid";
 import CVForm from "./CVForm/CVForm";
-import exampleCV from "./utils/exampleCV";
+import exampleCV from "./Utils/ExampleCV";
 import { useReactToPrint } from "react-to-print";
 import CVPreview from "./CVPreview/CVPreview";
 import styled from "styled-components";
+import emptyCV from "./Utils/EmptyCV";
+import { saveAs } from 'file-saver';
 
 const Main = () => {
   const [cv, setCv] = useState(emptyCV);
@@ -129,7 +130,7 @@ const Main = () => {
     setCv(exampleCV);
   };
 
-  const handleDownload = () => {};
+  const handleDownload =  useReactToPrint({ content: () => componentRef.current });
 
   const handleReset = () => {
     setCv(emptyCV);
